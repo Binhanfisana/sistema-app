@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Busca de Questões</title>
+    <style>
+        /* Estilo Global */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f7fa;
+            color: #333;
+        }
+
+        header {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+            font-size: 1.5em;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .container {
+            width: 90%;
+            margin: 20px auto;
+        }
+
+        h1 {
+            color: #007BFF;
+        }
+
+        /* Estilizando o Formulário */
+        form {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 15px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            grid-column: 1 / 4;
+            padding: 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Resultados */
+        .resultados {
+            margin-top: 30px;
+        }
+
+        .questao {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .questao h3 {
+            margin: 0;
+            color: #007BFF;
+        }
+
+        .questao p {
+            margin: 10px 0;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            form {
+                grid-template-columns: 1fr;
+            }
+
+            button {
+                grid-column: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav>
+        Busca de Questões - Sistema de Geração de Provas
+    </nav>
+</header>
+
+<div class="container">
+    <h1>Filtrar Questões</h1>
+
+    <!-- Formulário de Filtros -->
+    <form id="filtro-questoes">
+        <div>
+            <label for="assunto">Assunto:</label>
+            <input type="text" id="assunto" name="assunto" placeholder="Digite o assunto">
+        </div>
+
+        <div>
+            <label for="dificuldade">Dificuldade:</label>
+            <select id="dificuldade" name="dificuldade">
+                <option value="">Selecione</option>
+                <option value="Fácil">Fácil</option>
+                <option value="Médio">Médio</option>
+                <option value="Difícil">Difícil</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="tipo">Tipo de Questão:</label>
+            <select id="tipo" name="tipo">
+                <option value="">Selecione</option>
+                <option value="Múltipla Escolha">Múltipla Escolha</option>
+                <option value="Dissertativa">Dissertativa</option>
+            </select>
+        </div>
+
+        <button type="submit">Buscar Questões</button>
+    </form>
+
+    <!-- Resultados da Busca -->
+    <div class="resultados" id="resultado-questoes">
+        <!-- As questões filtradas aparecerão aqui -->
+    </div>
+</div>
+
+<script>
+    document.getElementById('filtro-questoes').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const assunto = document.getElementById('assunto').value;
+        const dificuldade = document.getElementById('dificuldade').value;
+        const tipo = document.getElementById('tipo').value;
+
+        // Fazer requisição para o backend
+        fetch(`/api/questoes?assunto=${assunto || ''}&dificuldade=${dificuldade || ''}&tipo=${tipo || ''}`)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Erro na rede ao buscar as questões.');
+                }
+                return response.json();
+            })
+            .then(data => {
+                let resultadoDiv = document.getElementById('resultado-questoes');
+                resultadoDiv.innerHTML = ''; // Limpar o conteúdo anterior
+                
+                if (data.length === 0) {
+                    resultadoDiv.innerHTML = '<p>Nenhuma questão encontrada com os filtros aplicados.</p>';
+                } else {
+                    data.forEach(questao => {
+                        resultadoDiv.innerHTML += `
+                            <div class="questao">
+                                <h3>${questao.assunto}</h3>
+                                <p><strong>Enunciado:</strong> ${questao.enunciado}</p>
+                                <p><strong>Dificuldade:</strong> ${questao.dificuldade}</p>
+                                <p><strong>Tipo:</strong> ${questao.tipo}</p>
+                            </div>`;
+                    });
+                }
+            })
+            .catch(error => {
+                console.error('Erro:', error);
+                document.getElementById('resultado-questoes').innerHTML = '<p>Ocorreu um erro ao buscar as questões.</p>';
+            });
+    });
+</script>
+
+</body>
+</html>

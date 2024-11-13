@@ -1,0 +1,844 @@
+[
+    {
+        "id": 1,
+        "assunto": "Matemática",
+        "categoria": "Aritmética",
+        "dificuldade": "Fácil",
+        "tipo": "Múltipla escolha",
+        "enunciado": "Qual é a soma de 2 + 2?",
+        "opcoes": ["1", "2", "3", "4"],
+        "resposta_correta": "4",
+        "explicacao": "A soma de 2 e 2 é igual a 4."
+    },
+    {
+        "id": 2,
+        "assunto": "Matemática",
+        "categoria": "Aritmética",
+        "dificuldade": "Média",
+        "tipo": "Múltipla escolha",
+        "enunciado": "Qual é o produto de 7 x 6?",
+        "opcoes": ["42", "36", "48", "54"],
+        "resposta_correta": "42",
+        "explicacao": "7 multiplicado por 6 é igual a 42."
+    },
+    {
+        "id": 3,
+        "assunto": "História",
+        "categoria": "Revoluções",
+        "dificuldade": "Média",
+        "tipo": "Dissertativa",
+        "enunciado": "Explique a importância da Revolução Francesa.",
+        "resposta_correta": "A Revolução Francesa foi um marco na luta por direitos civis e igualdade.",
+        "explicacao": "Ela inspirou movimentos democráticos ao redor do mundo e trouxe conceitos de liberdade e igualdade."
+    },
+    {
+        "id": 4,
+        "assunto": "Ciências",
+        "categoria": "Química",
+        "dificuldade": "Difícil",
+        "tipo": "Verdadeiro ou falso",
+        "enunciado": "A água é composta por dois átomos de hidrogênio e um de oxigênio.",
+        "resposta_correta": "Verdadeiro",
+        "explicacao": "A fórmula química da água é H₂O, que confirma a composição de dois átomos de hidrogênio e um de oxigênio."
+    },
+    {
+        "id": 5,
+        "assunto": "Literatura",
+        "categoria": "Romance Brasileiro",
+        "dificuldade": "Fácil",
+        "tipo": "Múltipla escolha",
+        "enunciado": "Quem escreveu 'Dom Casmurro'?",
+        "opcoes": ["Machado de Assis", "Jorge Amado", "Clarice Lispector", "Graciliano Ramos"],
+        "resposta_correta": "Machado de Assis",
+        "explicacao": "Dom Casmurro é um dos romances mais famosos de Machado de Assis, publicado em 1899."
+    },
+    {
+        "id": 6,
+        "assunto": "Geografia",
+        "categoria": "Capitais",
+        "dificuldade": "Fácil",
+        "tipo": "Múltipla escolha",
+        "enunciado": "Qual é a capital da França?",
+        "opcoes": ["Berlim", "Madrid", "Paris", "Lisboa"],
+        "resposta_correta": "Paris",
+        "explicacao": "Paris é a capital da França e é conhecida por sua rica história e cultura."
+    },
+    {
+        "id": 7,
+        "assunto": "Biologia",
+        "categoria": "Ecologia",
+        "dificuldade": "Fácil",
+        "tipo": "Verdadeiro ou falso",
+        "enunciado": "As plantas realizam a fotossíntese para obter energia.",
+        "resposta_correta": "Verdadeiro",
+        "explicacao": "A fotossíntese é o processo pelo qual as plantas convertem luz solar em energia."
+    },
+    {
+        "id": 8,
+        "assunto": "Física",
+        "categoria": "Mecânica",
+        "dificuldade": "Média",
+        "tipo": "Múltipla escolha",
+        "enunciado": "Qual é a fórmula da força?",
+        "opcoes": ["F = m * a", "F = m + a", "F = m / a", "F = a / m"],
+        "resposta_correta": "F = m * a",
+        "explicacao": "A força é igual à massa multiplicada pela aceleração."
+    },
+    {
+        "id": 9,
+        "assunto": "Matemática",
+        "categoria": "Geometria",
+        "dificuldade": "Difícil",
+        "tipo": "Dissertativa",
+        "enunciado": "Calcule a área de um triângulo com base 10 e altura 5.",
+        "resposta_correta": "A área é 25.",
+        "explicacao": "A área do triângulo é dada pela fórmula A = (base * altura) / 2 = (10 * 5) / 2 = 25."
+    },
+    {
+        "id": 10,
+        "assunto": "Química",
+        "categoria": "Elementos",
+        "dificuldade": "Média",
+        "tipo": "Múltipla escolha",
+        "enunciado": "Qual é o elemento químico com o símbolo 'O'?",
+        "opcoes": ["Ouro", "Oxigênio", "Osmônio", "Ótio"],
+        "resposta_correta": "Oxigênio",
+        "explicacao": "O símbolo 'O' representa o elemento químico oxigênio."
+    },
+    {
+        "assunto": "Matemática",
+            "dificuldade": "Fácil",
+            "tipo": "Múltipla Escolha",
+            "enunciado": "Qual é a soma de 2 + 2?",
+            "opcoes": ["1", "2", "3", "4"],
+            "resposta_correta": "4"
+    },
+    {
+            "assunto": "Matemática",
+            "dificuldade": "Fácil",
+            "tipo": "Múltipla Escolha",
+            "enunciado": "Qual é o produto de 3 x 5?",
+            "opcoes": ["15", "10", "8", "20"],
+            "resposta_correta": "15"
+    },
+        {
+            "assunto": "Matemática",
+            "dificuldade": "Fácil",
+            "tipo": "Múltipla Escolha",
+            "enunciado": "Qual número é par?",
+            "opcoes": ["3", "5", "8", "9"],
+            "resposta_correta": "8"
+        },
+        {
+            "assunto": "Matemática",
+            "dificuldade": "Fácil",
+            "tipo": "Múltipla Escolha",
+            "enunciado": "Qual é a raiz quadrada de 16?",
+            "opcoes": ["2", "3", "4", "5"],
+            "resposta_correta": "4"
+        },
+        {
+            "assunto": "Matemática",
+            "dificuldade": "Fácil",
+            "tipo": "Múltipla Escolha",
+            "enunciado": "Qual é o resultado de 10 - 7?",
+            "opcoes": ["4", "2", "1", "3"],
+            "resposta_correta": "3"
+        },
+        {
+            "assunto": "Matemática",
+            "dificuldade": "Fácil",
+            "tipo": "Múltipla Escolha",
+            "enunciado": "Qual é o próximo número na sequência: 1, 2, 3, ...?",
+            "opcoes": ["4", "5", "6", "7"],
+            "resposta_correta": "4"
+        },
+        {
+            "assunto": "Matemática",
+            "dificuldade": "Fácil",
+            "tipo": "Múltipla Escolha",
+            "enunciado": "Qual é 5% de 100?",
+            "opcoes": ["5", "10", "15", "20"],
+            "resposta_correta": "5"
+        },
+        {
+            "assunto": "Matemática",
+            "dificuldade": "Fácil",
+            "tipo": "Múltipla Escolha",
+            "enunciado": "Qual é a soma dos ângulos internos de um triângulo?",
+            "opcoes": ["90 graus", "180 graus", "270 graus", "360 graus"],
+            "resposta_correta": "180 graus"
+        },
+        {
+            "assunto": "Matemática",
+            "dificuldade": "Fácil",
+            "tipo": "Múltipla Escolha",
+            "enunciado": "Qual é o valor de π (pi) aproximadamente?",
+            "opcoes": ["2.14", "3.14", "4.14", "5.14"],
+            "resposta_correta": "3.14"
+        },
+        {
+            "assunto": "Matemática",
+            "dificuldade": "Fácil",
+            "tipo": "Múltipla Escolha",
+            "enunciado": "Qual é o ângulo reto em graus?",
+            "opcoes": ["45", "90", "180", "360"],
+            "resposta_correta": "90"
+        },
+    
+        
+        {
+            "assunto": "Matemática",
+            "dificuldade": "Médio",
+            "tipo": "Múltipla Escolha",
+            "enunciado": "Qual é a equação da reta que passa pelos pontos (2, 3) e (4, 7)?",
+            "opcoes": ["y = 2x + 1", "y = 2x - 1", "y = x + 2", "y = 4x - 5"],
+            "resposta_correta": "y = 2x - 1"
+        },
+        {
+            "assunto": "Matemática",
+            "dificuldade": "Médio",
+            "tipo": "Múltipla Escolha",
+            "enunciado": "Qual é a fórmula do teorema de Pitágoras?",
+            "opcoes": ["a² + b² = c", "a² + b² = c²", "c² = a + b", "c = a + b"],
+            "resposta_correta": "a² + b² = c²"
+        },
+        {
+            "assunto": "Matemática",
+            "dificuldade": "Médio",
+            "tipo": "Múltipla Escolha",
+            "enunciado": "Qual é a derivada de x²?",
+            "opcoes": ["2x", "x", "x²", "2"],
+            "resposta_correta": "2x"
+        },
+        {
+            "assunto": "Matemática",
+            "dificuldade": "Médio",
+            "tipo": "Múltipla Escolha",
+            "enunciado": "Qual é o valor de x na equação 3x + 4 = 10?",
+            "opcoes": ["1", "2", "3", "4"],
+            "resposta_correta": "2"
+        },
+        {
+            "assunto": "Matemática",
+            "dificuldade": "Médio",
+            "tipo": "Múltipla Escolha",
+            "enunciado": "Qual é a área de um círculo de raio 3?",
+            "opcoes": ["9π", "6π", "3π", "12π"],
+            "resposta_correta": "9π"
+        },
+        {
+            "assunto": "Matemática",
+            "dificuldade": "Médio",
+            "tipo": "Múltipla Escolha",
+            "enunciado": "Qual é a solução da equação quadrática x² - 5x + 6 = 0?",
+            "opcoes": ["x = 2 ou x = 3", "x = 1 ou x = 6", "x = 3 ou x = 4", "x = 2 ou x = 4"],
+            "resposta_correta": "x = 2 ou x = 3"
+        },
+        {
+            "assunto": "Matemática",
+            "dificuldade": "Médio",
+            "tipo": "Múltipla Escolha",
+            "enunciado": "Qual é a soma dos números ímpares de 1 a 9?",
+            "opcoes": ["25", "20", "30", "35"],
+            "resposta_correta": "25"
+        },
+        {
+            "assunto": "Matemática",
+            "dificuldade": "Médio",
+            "tipo": "Múltipla Escolha",
+            "enunciado": "Qual é o próximo termo na sequência: 2, 4, 8, 16, ...?",
+            "opcoes": ["24", "32", "64", "48"],
+            "resposta_correta": "32"
+        },
+        {
+            "assunto": "Matemática",
+            "dificuldade": "Médio",
+            "tipo": "Múltipla Escolha",
+            "enunciado": "Qual é o logaritmo de 100 na base 10?",
+            "opcoes": ["1", "2", "10", "100"],
+            "resposta_correta": "2"
+        },
+        {
+            "assunto": "Matemática",
+            "dificuldade": "Médio",
+            "tipo": "Múltipla Escolha",
+            "enunciado": "Qual é a média aritmética de 4, 8 e 12?",
+            "opcoes": ["8", "10", "12", "14"],
+            "resposta_correta": "8"
+        },
+        
+        
+        {
+            "assunto": "Matemática",
+            "dificuldade": "Difícil",
+            "tipo": "Múltipla Escolha",
+            "enunciado": "Qual é a integral de x²?",
+            "opcoes": ["(1/3)x³ + C", "(1/2)x² + C", "(1/4)x⁴ + C", "(1/5)x⁵ + C"],
+            "resposta_correta": "(1/3)x³ + C"
+        },
+        {
+            "assunto": "Matemática",
+            "dificuldade": "Difícil",
+            "tipo": "Múltipla Escolha",
+            "enunciado": "Qual é a matriz inversa de [[1, 2], [3, 4]]?",
+            "opcoes": ["[[4, -2], [-3, 1]]", "[[-4, 2], [3, -1]]", "[[1, 2], [3, 4]]", "[[2, -1], [-1.5, 0.5]]"],
+            "resposta_correta": "[[4, -2], [-3, 1]]"
+        },
+        {
+            "assunto": "Matemática",
+            "dificuldade": "Difícil",
+            "tipo": "Múltipla Escolha",
+            "enunciado": "Qual é a fórmula de Bhaskara?",
+            "opcoes": ["x = (-b ± √(b² - 4ac)) / 2a", "x = (b ± √(b² + 4ac)) / 2a", "x = (b ± √(b² - 4ac)) / a", "x = (-b ± √(b² + 4ac)) / 2a"],
+            "resposta_correta": "x = (-b ± √(b² - 4ac)) / 2a"
+        },
+        {
+            "assunto": "Matemática",
+            "dificuldade": "Difícil",
+            "tipo": "Múltipla Escolha",
+            "enunciado": "Qual é a função de densidade de probabilidade da distribuição normal?",
+            "opcoes": ["f(x) = (1/√(2πσ²)) e^(-((x-μ)²)/(2σ²))", "f(x) = e^(-x²)", "f(x) = (x - μ) / σ", "f(x) = e^(x)"],
+            "resposta_correta": "f(x) = (1/√(2πσ²)) e^(-((x-μ)²)/(2σ²))"
+        },
+        {
+            "assunto": "Matemática",
+            "dificuldade": "Difícil",
+            "tipo": "Múltipla Escolha",
+            "enunciado": "Qual é o limite de (sin(x)/x) quando x se aproxima de 0?",
+            "opcoes": ["0", "1", "∞", "Indeterminado"],
+            "resposta_correta": "1"
+        },
+        {
+            "assunto": "Matemática",
+            "dificuldade": "Difícil",
+            "tipo": "Múltipla Escolha",
+            "enunciado": "Qual é a fórmula de Euler?",
+            "opcoes": ["e^(iπ) + 1 = 0", "e^(x) = 1 + x + x²/2!", "e^(iθ) = cos(θ) + i sin(θ)", "Todas as alternativas estão corretas"],
+            "resposta_correta": "Todas as alternativas estão corretas"
+        },
+        {
+            "assunto": "Matemática",
+            "dificuldade": "Difícil",
+            "tipo": "Múltipla Escolha",
+            "enunciado": "Qual é a área de um triângulo com lados de 7, 8 e 9 usando a fórmula de Heron?",
+            "opcoes": ["20", "24", "28", "32"],
+            "resposta_correta": "24"
+        },
+        {
+            "assunto": "Matemática",
+            "dificuldade": "Difícil",
+            "tipo": "Múltipla Escolha",
+            "enunciado": "Qual é a soma dos ângulos internos de um polígono de 12 lados?",
+            "opcoes": ["1800", "3600", "5400", "7200"],
+            "resposta_correta": "1800"
+        },
+        {
+            "assunto": "Matemática",
+            "dificuldade": "Difícil",
+            "tipo": "Múltipla Escolha",
+            "enunciado": "Qual é a relação entre a hipotenusa e os catetos em um triângulo retângulo?",
+            "opcoes": ["a² + b² = c²", "c² = a + b", "a + b = c", "c = a - b"],
+            "resposta_correta": "a² + b² = c²"
+        },
+        {
+            "assunto": "Matemática",
+            "dificuldade": "Difícil",
+            "tipo": "Múltipla Escolha",
+            "enunciado": "Qual é o valor de e (número de Euler) aproximadamente?",
+            "opcoes": ["2.71", "3.14", "1.61", "1.41"],
+            "resposta_correta": "2.71"
+        },
+        
+        
+        {
+            "assunto": "História",
+            "dificuldade": "Fácil",
+            "tipo": "Múltipla Escolha",
+            "enunciado": "Quem foi o primeiro presidente dos Estados Unidos?",
+            "opcoes": ["Abraham Lincoln", "George Washington", "Thomas Jefferson", "John Adams"],
+            "resposta_correta": "George Washington"
+        },
+        {
+            "assunto": "História",
+            "dificuldade": "Fácil",
+            "tipo": "Múltipla Escolha",
+            "enunciado": "Qual evento deu início à Revolução Francesa?",
+            "opcoes": ["A Queda da Bastilha", "A Revolução Industrial", "O Congresso de Viena", "A Guerra dos Cem Anos"],
+            "resposta_correta": "A Queda da Bastilha"
+        },
+        {
+            "assunto": "História",
+            "dificuldade": "Fácil",
+            "tipo": "Múltipla Escolha",
+            "enunciado": "Qual foi o principal líder da Revolução Russa?",
+            "opcoes": ["Leon Trotsky", "Joseph Stalin", "Vladimir Lenin", "Nicholas II"],
+            "resposta_correta": "Vladimir Lenin"
+        },
+        {
+            "assunto": "História",
+            "dificuldade": "Fácil",
+            "tipo": "Múltipla Escolha",
+            "enunciado": "Qual país foi o berço da civilização antiga?",
+            "opcoes": ["Egito", "Grécia", "Roma", "Mesopotâmia"],
+            "resposta_correta": "Mesopotâmia"
+        },
+        {
+            "assunto": "História",
+            "dificuldade": "Fácil",
+            "tipo": "Múltipla Escolha",
+            "enunciado": "Qual foi o resultado da Segunda Guerra Mundial?",
+            "opcoes": ["A vitória das Potências do Eixo", "A vitória dos Aliados", "Um empate", "Divisão do mundo"],
+            "resposta_correta": "A vitória dos Aliados"
+        },
+        {
+            "assunto": "História",
+            "dificuldade": "Fácil",
+            "tipo": "Múltipla Escolha",
+            "enunciado": "Quem foi o autor da teoria da evolução das espécies?",
+            "opcoes": ["Charles Darwin", "Isaac Newton", "Albert Einstein", "Galileu Galilei"],
+            "resposta_correta": "Charles Darwin"
+        },
+        {
+            "assunto": "História",
+            "dificuldade": "Fácil",
+            "tipo": "Múltipla Escolha",
+            "enunciado": "Qual foi a principal causa da Guerra Civil Americana?",
+            "opcoes": ["A escravidão", "A industrialização", "A expansão para o oeste", "Os impostos"],
+            "resposta_correta": "A escravidão"
+        },
+        {
+            "assunto": "História",
+            "dificuldade": "Fácil",
+            "tipo": "Múltipla Escolha",
+            "enunciado": "Qual império era conhecido como o 'Império do Sol Nascente'?",
+            "opcoes": ["Império Otomano", "Império Japonês", "Império Romano", "Império Britânico"],
+            "resposta_correta": "Império Japonês"
+        },
+        {
+            "assunto": "História",
+            "dificuldade": "Fácil",
+            "tipo": "Múltipla Escolha",
+            "enunciado": "Qual documento declarou a independência dos Estados Unidos?",
+            "opcoes": ["A Constituição", "A Declaração dos Direitos do Homem", "A Declaração de Independência", "O Manifesto Comunista"],
+            "resposta_correta": "A Declaração de Independência"
+        },
+        {
+            "assunto": "História",
+            "dificuldade": "Fácil",
+            "tipo": "Múltipla Escolha",
+            "enunciado": "Qual civilização construiu as pirâmides?",
+            "opcoes": ["Maia", "Asteca", "Egípcia", "Romana"],
+            "resposta_correta": "Egípcia"
+        },
+    
+       
+        {
+            "assunto": "História",
+            "dificuldade": "Médio",
+            "tipo": "Múltipla Escolha",
+            "enunciado": "Quem foi o imperador romano durante a maior parte da época de Cristo?",
+            "opcoes": ["Júlio César", "Augusto", "Nero", "Trajano"],
+            "resposta_correta": "Augusto"
+        },
+        {
+            "assunto": "História",
+            "dificuldade": "Médio",
+            "tipo": "Múltipla Escolha",
+            "enunciado": "Qual foi o impacto da Revolução Industrial na sociedade?",
+            "opcoes": ["Crescimento das cidades", "Aumento da população rural", "Maior produção agrícola", "Redução da classe trabalhadora"],
+            "resposta_correta": "Crescimento das cidades"
+        },
+        {
+            "assunto": "História",
+            "dificuldade": "Médio",
+            "tipo": "Múltipla Escolha",
+            "enunciado": "Quem foi a rainha da Inglaterra durante a maior parte do século XIX?",
+            "opcoes": ["Victoria", "Elizabeth I", "Mary", "Anne"],
+            "resposta_correta": "Victoria"
+        },
+        {
+            "assunto": "História",
+            "dificuldade": "Médio",
+            "tipo": "Múltipla Escolha",
+            "enunciado": "Qual tratado encerrou a Primeira Guerra Mundial?",
+            "opcoes": ["Tratado de Versalhes", "Tratado de Trianon", "Tratado de Saint-Germain", "Tratado de Lausanne"],
+            "resposta_correta": "Tratado de Versalhes"
+        },
+        {
+            "assunto": "História",
+            "dificuldade": "Médio",
+            "tipo": "Múltipla Escolha",
+            "enunciado": "Qual foi a principal causa da Primeira Guerra Mundial?",
+            "opcoes": ["Alianças militares", "Nacionalismo", "Imperialismo", "Todas as anteriores"],
+            "resposta_correta": "Todas as anteriores"
+        },
+        {
+            "assunto": "História",
+            "dificuldade": "Médio",
+            "tipo": "Múltipla Escolha",
+            "enunciado": "Qual foi o nome da primeira colônia britânica na América?",
+            "opcoes": ["Jamestown", "Plymouth", "Roanoke", "New Amsterdam"],
+            "resposta_correta": "Jamestown"
+        },
+        {
+            "assunto": "História",
+            "dificuldade": "Médio",
+            "tipo": "Múltipla Escolha",
+            "enunciado": "Qual evento foi o catalisador para a descolonização da África?",
+            "opcoes": ["Guerra Fria", "Segunda Guerra Mundial", "Primeira Guerra Mundial", "Movimento dos Direitos Civis"],
+            "resposta_correta": "Segunda Guerra Mundial"
+        },
+        {
+            "assunto": "História",
+            "dificuldade": "Médio",
+            "tipo": "Múltipla Escolha",
+            "enunciado": "Qual foi o principal produto da colônia brasileira durante o período colonial?",
+            "opcoes": ["Café", "Cana-de-açúcar", "Algodão", "Ouro"],
+            "resposta_correta": "Cana-de-açúcar"
+        },
+        {
+            "assunto": "História",
+            "dificuldade": "Médio",
+            "tipo": "Múltipla Escolha",
+            "enunciado": "Qual foi o movimento cultural que surgiu no século XIV na Europa?",
+            "opcoes": ["Iluminismo", "Renascimento", "Romantismo", "Realismo"],
+            "resposta_correta": "Renascimento"
+        },
+        {
+            "assunto": "História",
+            "dificuldade": "Médio",
+            "tipo": "Múltipla Escolha",
+            "enunciado": "Qual foi a principal causa da queda do Império Romano?",
+            "opcoes": ["Invasões bárbaras", "Crise econômica", "Desentendimentos políticos", "Todas as anteriores"],
+            "resposta_correta": "Todas as anteriores"
+        },
+    
+        {
+            "assunto": "História",
+            "dificuldade": "Difícil",
+            "tipo": "Múltipla Escolha",
+            "enunciado": "Qual foi a principal consequência da Revolução Industrial?",
+            "opcoes": ["Mudanças sociais", "Aumento da população", "Desenvolvimento tecnológico", "Todas as anteriores"],
+            "resposta_correta": "Todas as anteriores"
+        },
+        {
+            "assunto": "História",
+            "dificuldade": "Difícil",
+            "tipo": "Múltipla Escolha",
+            "enunciado": "Qual foi o principal autor do Manifesto Comunista?",
+            "opcoes": ["Karl Marx", "Friedrich Engels", "Vladimir Lenin", "Leon Trotsky"],
+            "resposta_correta": "Karl Marx"
+        },
+        {
+            "assunto": "História",
+            "dificuldade": "Difícil",
+            "tipo": "Múltipla Escolha",
+            "enunciado": "Quem foi o líder da Revolução Cubana?",
+            "opcoes": ["Fidel Castro", "Che Guevara", "Raúl Castro", "Juan Almeida"],
+            "resposta_correta": "Fidel Castro"
+        },
+        {
+            "assunto": "História",
+            "dificuldade": "Difícil",
+            "tipo": "Múltipla Escolha",
+            "enunciado": "Qual foi o impacto do colonialismo na África?",
+            "opcoes": ["Divisão étnica", "Exploração de recursos", "Conflitos internos", "Todas as anteriores"],
+            "resposta_correta": "Todas as anteriores"
+        },
+        {
+            "assunto": "História",
+            "dificuldade": "Difícil",
+            "tipo": "Múltipla Escolha",
+            "enunciado": "Qual foi a principal causa da Guerra Fria?",
+            "opcoes": ["Diferenças ideológicas", "Corrida armamentista", "Expansão do comunismo", "Todas as anteriores"],
+            "resposta_correta": "Todas as anteriores"
+        },
+        {
+            "assunto": "História",
+            "dificuldade": "Difícil",
+            "tipo": "Múltipla Escolha",
+            "enunciado": "Qual foi o nome da conferência que dividiu a África entre as potências europeias?",
+            "opcoes": ["Conferência de Berlim", "Conferência de Paris", "Conferência de Potsdam", "Conferência de Yalta"],
+            "resposta_correta": "Conferência de Berlim"
+        },
+        {
+            "assunto": "História",
+            "dificuldade": "Difícil",
+            "tipo": "Múltipla Escolha",
+            "enunciado": "Quem foi o responsável pela criação da Liga das Nações?",
+            "opcoes": ["Woodrow Wilson", "Franklin D. Roosevelt", "Winston Churchill", "David Lloyd George"],
+            "resposta_correta": "Woodrow Wilson"
+        },
+        {
+            "assunto": "História",
+            "dificuldade": "Difícil",
+            "tipo": "Múltipla Escolha",
+            "enunciado": "Qual foi a principal causa da Revolução de 1848 na Europa?",
+            "opcoes": ["Conflitos sociais", "Reformas políticas", "Nacionalismo", "Todas as anteriores"],
+            "resposta_correta": "Todas as anteriores"
+        },
+        {
+            "assunto": "História",
+            "dificuldade": "Difícil",
+            "tipo": "Múltipla Escolha",
+            "enunciado": "Qual foi a razão da divisão da Alemanha após a Segunda Guerra Mundial?",
+            "opcoes": ["Divergências políticas", "Divergências econômicas", "Ambas as opções", "Nenhuma das opções"],
+            "resposta_correta": "Ambas as opções"
+        },
+        {
+            "assunto": "História",
+            "dificuldade": "Difícil",
+            "tipo": "Múltipla Escolha",
+            "enunciado": "Qual foi a principal consequência da Revolução Francesa?",
+            "opcoes": ["Abolição da monarquia", "Estabelecimento da república", "Direitos humanos", "Todas as anteriores"],
+            "resposta_correta": "Todas as anteriores"
+        },
+        
+        {
+            "assunto": "Ciências",
+            "dificuldade": "Fácil",
+            "tipo": "Múltipla Escolha",
+            "enunciado": "Qual é a unidade básica da vida?",
+            "opcoes": ["Átomo", "Molécula", "Célula", "Teoria"],
+            "resposta_correta": "Célula"
+        },
+        {
+            "assunto": "Ciências",
+            "dificuldade": "Fácil",
+            "tipo": "Múltipla Escolha",
+            "enunciado": "Qual é o planeta mais próximo do Sol?",
+            "opcoes": ["Marte", "Vênus", "Terra", "Mercúrio"],
+            "resposta_correta": "Mercúrio"
+        },
+        {
+            "assunto": "Ciências",
+            "dificuldade": "Fácil",
+            "tipo": "Múltipla Escolha",
+            "enunciado": "Qual é a fórmula química da água?",
+            "opcoes": ["CO₂", "H₂O", "O₂", "CH₄"],
+            "resposta_correta": "H₂O"
+        },
+        {
+            "assunto": "Ciências",
+            "dificuldade": "Fácil",
+            "tipo": "Múltipla Escolha",
+            "enunciado": "Qual parte da célula é responsável pela produção de energia?",
+            "opcoes": ["Núcleo", "Mitocôndria", "Ribossomo", "Membrana celular"],
+            "resposta_correta": "Mitocôndria"
+        },
+        {
+            "assunto": "Ciências",
+            "dificuldade": "Fácil",
+            "tipo": "Múltipla Escolha",
+            "enunciado": "Qual é o órgão responsável pela bombagem do sangue no corpo humano?",
+            "opcoes": ["Coração", "Pulmão", "Fígado", "Rim"],
+            "resposta_correta": "Coração"
+        },
+        {
+            "assunto": "Ciências",
+            "dificuldade": "Fácil",
+            "tipo": "Múltipla Escolha",
+            "enunciado": "Qual é a principal fonte de energia para os seres vivos?",
+            "opcoes": ["Água", "Sol", "Alimento", "Ar"],
+            "resposta_correta": "Sol"
+        },
+        {
+            "assunto": "Ciências",
+            "dificuldade": "Fácil",
+            "tipo": "Múltipla Escolha",
+            "enunciado": "Qual é a camada mais externa da Terra?",
+            "opcoes": ["Manto", "Crostas", "Núcleo", "Atenosfera"],
+            "resposta_correta": "Crostas"
+        },
+        {
+            "assunto": "Ciências",
+            "dificuldade": "Fácil",
+            "tipo": "Múltipla Escolha",
+            "enunciado": "Qual é o processo pelo qual as plantas produzem alimento?",
+            "opcoes": ["Respiração", "Fotossíntese", "Fermentação", "Transpiração"],
+            "resposta_correta": "Fotossíntese"
+        },
+        {
+            "assunto": "Ciências",
+            "dificuldade": "Fácil",
+            "tipo": "Múltipla Escolha",
+            "enunciado": "Qual é a unidade de medida da força?",
+            "opcoes": ["Joule", "Newton", "Pascal", "Watt"],
+            "resposta_correta": "Newton"
+        },
+        {
+            "assunto": "Ciências",
+            "dificuldade": "Fácil",
+            "tipo": "Múltipla Escolha",
+            "enunciado": "Qual é a forma de energia armazenada em alimentos?",
+            "opcoes": ["Energética", "Térmica", "Química", "Mecânica"],
+            "resposta_correta": "Química"
+        },
+    
+           
+        {
+            "assunto": "Ciências",
+            "dificuldade": "Médio",
+            "tipo": "Múltipla Escolha",
+            "enunciado": "Qual é a função do sistema nervoso?",
+            "opcoes": ["Coordenar ações do corpo", "Regular a temperatura", "Proteger o corpo", "Produzir hormônios"],
+            "resposta_correta": "Coordenar ações do corpo"
+        },
+        {
+            "assunto": "Ciências",
+            "dificuldade": "Médio",
+            "tipo": "Múltipla Escolha",
+            "enunciado": "Qual é a principal função dos glóbulos vermelhos?",
+            "opcoes": ["Transportar oxigênio", "Defender o corpo", "Coagular o sangue", "Regular a temperatura"],
+            "resposta_correta": "Transportar oxigênio"
+        },
+        {
+            "assunto": "Ciências",
+            "dificuldade": "Médio",
+            "tipo": "Múltipla Escolha",
+            "enunciado": "Qual é o ciclo de vida de uma planta?",
+            "opcoes": ["Ciclo de Krebs", "Ciclo de vida", "Ciclo do carbono", "Ciclo de vida da planta"],
+            "resposta_correta": "Ciclo de vida da planta"
+        },
+        {
+            "assunto": "Ciências",
+            "dificuldade": "Médio",
+            "tipo": "Múltipla Escolha",
+            "enunciado": "Qual é o componente do sangue responsável pela defesa do organismo?",
+            "opcoes": ["Glóbulos vermelhos", "Plaquetas", "Plasma", "Glóbulos brancos"],
+            "resposta_correta": "Glóbulos brancos"
+        },
+        {
+            "assunto": "Ciências",
+            "dificuldade": "Médio",
+            "tipo": "Múltipla Escolha",
+            "enunciado": "Qual é a fórmula química do dióxido de carbono?",
+            "opcoes": ["CO", "CO₂", "O₂", "H₂O"],
+            "resposta_correta": "CO₂"
+        },
+        {
+            "assunto": "Ciências",
+            "dificuldade": "Médio",
+            "tipo": "Múltipla Escolha",
+            "enunciado": "Qual é o principal gás responsável pelo efeito estufa?",
+            "opcoes": ["Oxigênio", "Dióxido de carbono", "Metano", "Óxido nitroso"],
+            "resposta_correta": "Dióxido de carbono"
+        },
+        {
+            "assunto": "Ciências",
+            "dificuldade": "Médio",
+            "tipo": "Múltipla Escolha",
+            "enunciado": "Qual é o fenômeno que causa as marés?",
+            "opcoes": ["Atração gravitacional", "Rotação da Terra", "Mudanças de temperatura", "A atividade solar"],
+            "resposta_correta": "Atração gravitacional"
+        },
+        {
+            "assunto": "Ciências",
+            "dificuldade": "Médio",
+            "tipo": "Múltipla Escolha",
+            "enunciado": "Qual é o processo pelo qual as células se dividem?",
+            "opcoes": ["Mitose", "Meiose", "Fusão", "Citoquinese"],
+            "resposta_correta": "Mitose"
+        },
+        {
+            "assunto": "Ciências",
+            "dificuldade": "Médio",
+            "tipo": "Múltipla Escolha",
+            "enunciado": "Qual é a principal função da clorofila?",
+            "opcoes": ["Captar luz", "Proteger a planta", "Armazenar energia", "Transportar água"],
+            "resposta_correta": "Captar luz"
+        },
+        {
+            "assunto": "Ciências",
+            "dificuldade": "Médio",
+            "tipo": "Múltipla Escolha",
+            "enunciado": "Qual é o principal ácido encontrado no estômago?",
+            "opcoes": ["Ácido acético", "Ácido clorídrico", "Ácido sulfúrico", "Ácido cítrico"],
+            "resposta_correta": "Ácido clorídrico"
+        },
+    
+        
+        {
+            "assunto": "Ciências",
+            "dificuldade": "Difícil",
+            "tipo": "Múltipla Escolha",
+            "enunciado": "Qual é a diferença entre um vírus e uma bactéria?",
+            "opcoes": ["Vírus são células, bactérias não", "Bactérias têm DNA, vírus não", "Vírus são organismos, bactérias não", "Ambos são organismos unicelulares"],
+            "resposta_correta": "Bactérias têm DNA, vírus não"
+        },
+        {
+            "assunto": "Ciências",
+            "dificuldade": "Difícil",
+            "tipo": "Múltipla Escolha",
+            "enunciado": "Qual é a função dos ribossomos?",
+            "opcoes": ["Produzir energia", "Síntese de proteínas", "Transporte de substâncias", "Degradação de resíduos"],
+            "resposta_correta": "Síntese de proteínas"
+        },
+        {
+            "assunto": "Ciências",
+            "dificuldade": "Difícil",
+            "tipo": "Múltipla Escolha",
+            "enunciado": "Qual é o principal tipo de ligação que une os átomos em uma molécula?",
+            "opcoes": ["Ligação iônica", "Ligação covalente", "Ligação metálica", "Ligação de hidrogênio"],
+            "resposta_correta": "Ligação covalente"
+        },
+        {
+            "assunto": "Ciências",
+            "dificuldade": "Difícil",
+            "tipo": "Múltipla Escolha",
+            "enunciado": "Qual é a principal causa da acidificação dos oceanos?",
+            "opcoes": ["Desmatamento", "Emissão de CO₂", "Poluição", "Aquecimento global"],
+            "resposta_correta": "Emissão de CO₂"
+        },
+        {
+            "assunto": "Ciências",
+            "dificuldade": "Difícil",
+            "tipo": "Múltipla Escolha",
+            "enunciado": "Qual é o processo pelo qual as plantas absorvem água?",
+            "opcoes": ["Transpiração", "Absorção", "Filtração", "Osmose"],
+            "resposta_correta": "Osmose"
+        },
+        {
+            "assunto": "Ciências",
+            "dificuldade": "Difícil",
+            "tipo": "Múltipla Escolha",
+            "enunciado": "Qual é o impacto das mudanças climáticas na biodiversidade?",
+            "opcoes": ["Extinção de espécies", "Aumento da população", "Crescimento de ecossistemas", "Nenhuma das anteriores"],
+            "resposta_correta": "Extinção de espécies"
+        },
+        {
+            "assunto": "Ciências",
+            "dificuldade": "Difícil",
+            "tipo": "Múltipla Escolha",
+            "enunciado": "Qual é o tipo de célula responsável pela resposta imune?",
+            "opcoes": ["Neurônios", "Glóbulos vermelhos", "Glóbulos brancos", "Células musculares"],
+            "resposta_correta": "Glóbulos brancos"
+        },
+        {
+            "assunto": "Ciências",
+            "dificuldade": "Difícil",
+            "tipo": "Múltipla Escolha",
+            "enunciado": "Qual é a diferença entre a fotossíntese e a respiração celular?",
+            "opcoes": ["A fotossíntese ocorre em plantas, a respiração celular em animais", "Ambos ocorrem em plantas", "Ambos ocorrem em animais", "Nenhuma das anteriores"],
+            "resposta_correta": "A fotossíntese ocorre em plantas, a respiração celular em animais"
+        },
+        {
+            "assunto": "Ciências",
+            "dificuldade": "Difícil",
+            "tipo": "Múltipla Escolha",
+            "enunciado": "Qual é a estrutura que controla a entrada e saída de substâncias na célula?",
+            "opcoes": ["Núcleo", "Membrana celular", "Citoplasma", "Mitocôndria"],
+            "resposta_correta": "Membrana celular"
+        },
+        {
+            "assunto": "Ciências",
+            "dificuldade": "Difícil",
+            "tipo": "Múltipla Escolha",
+            "enunciado": "Qual é o fenômeno que ocorre quando a luz passa através de um prisma?",
+            "opcoes": ["Refração", "Reflexão", "Absorção", "Transmissão"],
+            "resposta_correta": "Refração"
+        }
+    
+    
+]

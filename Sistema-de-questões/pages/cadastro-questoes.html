@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Questões</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #007BFF;
+        }
+
+        form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            max-width: 500px;
+            margin: auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Cadastrar Questão</h1>
+
+<form id="cadastro-questoes">
+    <label for="assunto">Assunto:</label>
+    <input type="text" id="assunto" name="assunto" required placeholder="Digite o assunto">
+
+    <label for="dificuldade">Dificuldade:</label>
+    <select id="dificuldade" name="dificuldade" required>
+        <option value="">Selecione</option>
+        <option value="Fácil">Fácil</option>
+        <option value="Médio">Médio</option>
+        <option value="Difícil">Difícil</option>
+    </select>
+
+    <label for="tipo">Tipo de Questão:</label>
+    <select id="tipo" name="tipo" required>
+        <option value="">Selecione</option>
+        <option value="Múltipla Escolha">Múltipla Escolha</option>
+        <option value="Dissertativa">Dissertativa</option>
+    </select>
+
+    <label for="enunciado">Enunciado:</label>
+    <textarea id="enunciado" name="enunciado" required placeholder="Digite o enunciado da questão"></textarea>
+
+    <button type="submit">Cadastrar Questão</button>
+</form>
+
+<script>
+    document.getElementById('cadastro-questoes').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const assunto = document.getElementById('assunto').value;
+        const dificuldade = document.getElementById('dificuldade').value;
+        const tipo = document.getElementById('tipo').value;
+        const enunciado = document.getElementById('enunciado').value;
+
+        // Enviar os dados para o backend
+        fetch('/api/cadastrar-questao', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ assunto, dificuldade, tipo, enunciado }),
+        })
+        .then(response => response.json())
+        .then(data => {
+            alert(data.message);
+        })
+        .catch(error => {
+            alert('Erro ao cadastrar a questão.');
+        });
+    });
+</script>
+
+</body>
+</html>

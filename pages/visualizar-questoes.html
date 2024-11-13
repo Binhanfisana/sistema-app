@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <a href="index.html" class="btn">Voltar à Página Inicial</a>
+    <title>Visualizar Questões</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://unsplash.com/pt-br/fotografias/livros-na-prateleira-de-madeira-marrom-2JIvboGLeho'); /* Substitua pelo seu link de imagem */
+            background-size: cover; /* Faz a imagem cobrir todo o fundo */
+            background-position: center; /* Centraliza a imagem */
+            background-repeat: no-repeat; /* Não repete a imagem */
+            margin: 10;
+            padding: 20px;
+            color: #333; /* Cor do texto */
+        }
+
+        h1 {
+            color: #007BFF;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .table {
+            background-image: rgb(37, 35, 35);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(219, 19, 19, 0.1);
+        }
+
+        .remove-btn {
+            color: rgb(21, 151, 28);
+            cursor: pointer;
+        }
+
+        .toast {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1050;
+        }
+
+        .spinner-border {
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Questões Cadastradas</h1>
+
+<div class="search-container text-center mb-4">
+    <input type="text" class="form-control d-inline-block" style="width: 300px;" id="search" placeholder="Buscar por assunto...">
+    <button class="btn btn-primary" id="search-btn"><i class="fas fa-search"></i> Buscar</button>
+</div>
+
+<!-- Tabela de Questões -->
+<div class="table-responsive">
+    <table class="table table-striped" id="questoes-table">
+        <thead class="table-primary">
+            <tr>
+                <th>Assunto</th>
+                <th>Dificuldade</th>
+                <th>Tipo</th>
+                <th>Enunciado</th>
+                <th>Ação</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</div>
+
+<!-- Paginação -->
+<nav aria-label="Navegação de página">
+    <ul class="pagination justify-content-center" id="pagination"></ul>
+</nav>
+
+<!-- Modal de Confirmação -->
+<div class="modal fade" id="confirmModal" tabindex="-1" aria-labelledby="confirmModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="confirmModalLabel">Confirmação</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Tem certeza que deseja remover esta questão?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-danger" id="confirmRemoveBtn">Remover</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Toast para mensagens de sucesso ou erro -->
+<div class="toast align-items-center text-white bg-success" id="successToast" role="alert" aria-live="assertive" aria-atomic="true">
+  <div class="d-flex">
+    <div class="toast-body">
+      Questão removida com sucesso.
+    </div>
+    <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+  </div>
+</div>
+
+<div class="toast align-items-center text-white bg-danger" id="errorToast" role="alert" aria-live="assertive" aria-atomic="true">
+  <div class="d-flex">
+    <div class="toast-body">
+      Ocorreu um erro ao tentar remover a questão.
+    </div>
+    <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+  </div>
+</div>
+
+<!-- Spinner de carregamento -->
+<div class="spinner-border text-primary" role="status" id="loadingSpinner" style="display: none;">
+  <span class="visually-hidden">Carregando...</span>
+</div>
+
+<!-- JavaScript para Bootstrap e interatividade -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    const questoesPerPage = 10;
+    let questoes = [];
+    let filteredQuestoes = [];
+    let currentPage = 1;
+    let questaoToRemove = null;
+
+    // Função para renderizar a tabela de questões
+    function renderTable(page, data) {
+        const tableBody = document.querySelector('#questoes-table tbody');
+        tableBody.innerHTML = '';
+
+        const start = (page - 1) * questoesPerPage;
+        const end = start + questoesPerPage;
+        const paginatedQuestoes = data.slice(start, end);
+
+        paginatedQuestoes.forEach((questao) => {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${questao.assunto}</td>
+                <td>${questao.dificuldade}</td>
+                <td>${questao.tipo}</td>
+                <td>${questao.enunciado}</td>
+                <td><button class="btn btn-danger remove-btn" data-id="${questao.id}">Remover</button></td>
+            `;
+            tableBody.appendChild(row);
+        });
+
+        // Adicionar eventos de remoção
+        document.querySelectorAll('.remove-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                questaoToRemove = this.getAttribute('data-id');
+                const modal = new bootstrap.Modal(document.getElementById('confirmModal'));
+                modal.show();
+            });
+        });
+
+        renderPagination(data);
+    }
+
+    // Função para filtrar questões
+    function filterQuestoes(term) {
+        const searchTerm = term.toLowerCase();
+        return questoes.filter(questao => 
+            questao.assunto.toLowerCase().includes(searchTerm)
+        );
+    }
+
+    // Evento de clique no botão de busca
+    document.getElementById('search-btn').addEventListener('click', function() {
+        const searchTerm = document.getElementById('search').value;
+        filteredQuestoes = filterQuestoes(searchTerm);
+        renderTable(1, filteredQuestoes);
+    });
+
+    // Função para remover uma questão
+    function removeQuestao(id) {
+        document.getElementById('loadingSpinner').style.display = 'block';
+        fetch(`/api/questoes/${id}`, {
+            method: 'DELETE'
+        })
+        .then(response => {
+            document.getElementById('loadingSpinner').style.display = 'none';
+            if (!response.ok) {
+                throw new Error('Erro ao remover a questão.');
+            }
+            return response.json();
+        })
+        .then(() => {
+            questoes = questoes.filter(questao => questao.id !== id);
+            renderTable(currentPage, questoes);
+            showToast('successToast');
+        })
+        .catch(error => {
+            console.error('Erro ao remover a questão:', error);
+            showToast('errorToast');
+        });
+    }
+
+    // Função para mostrar toast
+    function showToast(toastId) {
+        const toastElement = document.getElementById(toastId);
+        const toast = new bootstrap.Toast(toastElement);
+        toast.show();
+    }
+
+    // Evento de confirmação de remoção
+    document.getElementById('confirmRemoveBtn').addEventListener('click', function() {
+        if (questaoToRemove) {
+            removeQuestao(questaoToRemove);
+            const modal = bootstrap.Modal.getInstance(document.getElementById('confirmModal'));
+            modal.hide();
+        }
+    });
+
+    // Função para renderizar a paginação
+    function renderPagination(data) {
+        const pagination = document.getElementById('pagination');
+        pagination.innerHTML = '';
+
+        const pageCount = Math.ceil(data.length / questoesPerPage);
+        for (let i = 1; i <= pageCount; i++) {
+            const li = document.createElement('li');
+            li.classList.add('page-item');
+            li.innerHTML = `<button class="page-link">${i}</button>`;
+            li.onclick = () => {
+                currentPage = i;
+                renderTable(currentPage, data);
+            };
+            pagination.appendChild(li);
+        }
+    }
+
+    // Buscar questões do backend e preencher a tabela
+    fetch('/api/questoes')
+        .then(response => response.json())
+        .then(data => {
+            questoes = data;
+            filteredQuestoes = questoes; // No início, todas as questões estão exibidas
+            renderTable(currentPage, questoes);
+        })
+        .catch(error => {
+            console.error('Erro ao carregar questões:', error);
+        });
+</script>
+
+</body>
+</html>
