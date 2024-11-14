@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Gestão de Questões</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* Garantir que o html e o body ocupem toda a altura */
+        html, body {
+            height: 100%;
+            margin: 0;
+            margin-bottom: 30px;
+        }
+
+        /* Usar flexbox no body para alinhar conteúdo verticalmente */
+        body {
+            
+            display: flex;
+            flex-direction: column;
+            background-image: url ('https://www.google.com/url?sa=i&url=https%3A%2F%2Funsplash.com%2Fimages%2Fthings%2Fbook&psig=AOvVaw2U_an0DZXJc5fId_0cE9eU&ust=1729960913225000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCKiXi978qYkDFQAAAAAdAAAAABAE');
+            background-size: cover; /* Cobre toda a tela */
+            background-position: center; /* Centraliza a imagem */
+            background-repeat: no-repeat; /* Não repete a imagem */
+        }
+        
+
+        /* O conteúdo principal ocupa o espaço flexível */
+        .container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Centraliza o conteúdo verticalmente */
+            align-items: center; /* Centraliza o conteúdo horizontalmente */
+        }
+ /* Rodapé estilizado */
+ footer {
+            background-color: #007BFF; /* Cor de fundo do rodapé */
+            color: white; /* Cor do texto */
+            text-align: center; /* Centraliza o texto */
+            padding: 10px; /* Espaçamento interno do rodapé */
+        }
+      
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+           
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav w-100 d-flex justify-content-between">
+                    <li class="nav-item flex-fill">
+                        <a class="nav-link active" aria-current="page" href="#">Início</a>
+                    </li>
+                    <li class="nav-item flex-fill">
+                        <a class="nav-link" href="cadastro-questoes.html">Cadastrar Questões</a> 
+                    </li>
+                    <li class="nav-item flex-fill">
+                        <a class="nav-link" href="busca-questoes.html">Buscar Questões</a>
+                    </li>
+                    <li class="nav-item flex-fill">
+                        <a class="nav-link" href="visualizar-questoes.html">Visualizar Questões</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    
+
+    <div class="container mt-5">
+        <h1 class="text-center">Bem-vindo ao Sistema de Gestão de Questões</h1>
+        <p class="text-center">Escolha uma das opções abaixo para começar</p>
+
+        <div class="d-flex justify-content-center mt-4">
+            <a href="cadastro-questoes.html" class="btn btn-primary btn-lg mx-2">Cadastrar Questões</a>
+            <a href="busca-questoes.html" class="btn btn-success btn-lg mx-2">Buscar Questões</a>
+            <a href="visualizar-questoes.html" class="btn btn-info btn-lg mx-2">Visualizar Questões</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Sistema de Gestão de Questões</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

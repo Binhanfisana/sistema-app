@@ -1,85 +1,82 @@
 [
-<<<<<<< HEAD
-    {
-        "id": 1,
-        "assunto": "Matemática",
-        "categoria": "Aritmética",
-        "dificuldade": "Fácil",
-        "tipo": "Múltipla escolha",
-        "enunciado": "Qual é a soma de 2 + 2?",
-        "opcoes": [
-            "1",
-            "2",
-            "3",
-            "4"
-        ],
-        "resposta_correta": "4",
-        "explicacao": "A soma de 2 e 2 é igual a 4."
-    },
-    {
-        "id": 2,
-        "assunto": "História",
-        "categoria": "Revoluções",
-        "dificuldade": "Média",
-        "tipo": "Dissertativa",
-        "enunciado": "Explique a importância da Revolução Francesa.",
-        "resposta_correta": "A Revolução Francesa foi um marco na luta por direitos civis e igualdade.",
-        "explicacao": "Ela inspirou movimentos democráticos ao redor do mundo e trouxe conceitos de liberdade e igualdade."
-    },
-    {
-        "id": 3,
-        "assunto": "Ciências",
-        "categoria": "Química",
-        "dificuldade": "Difícil",
-        "tipo": "Verdadeiro ou falso",
-        "enunciado": "A água é composta por dois átomos de hidrogênio e um de oxigênio.",
-        "resposta_correta": "Verdadeiro",
-        "explicacao": "A fórmula química da água é H₂O, que confirma a composição de dois átomos de hidrogênio e um de oxigênio."
-    },
-    {
-        "id": 4,
-        "assunto": "Literatura",
-        "categoria": "Romance Brasileiro",
-        "dificuldade": "Fácil",
-        "tipo": "Múltipla escolha",
-        "enunciado": "Quem escreveu 'Dom Casmurro'?",
-        "opcoes": [
-            "Machado de Assis",
-            "Jorge Amado",
-            "Clarice Lispector",
-            "Graciliano Ramos"
-        ],
-        "resposta_correta": "Machado de Assis",
-        "explicacao": "Dom Casmurro é um dos romances mais famosos de Machado de Assis, publicado em 1899."
-    },
-    {
-        "id": 5,
-        "assunto": "Geografia",
-        "categoria": "Capitais",
-        "dificuldade": "Média",
-        "tipo": "Múltipla escolha",
-        "enunciado": "Qual é a capital da França?",
-        "opcoes": [
-            "Berlim",
-            "Madrid",
-            "Paris",
-            "Lisboa"
-        ],
-        "resposta_correta": "Paris",
-        "explicacao": "Paris é a capital da França e é conhecida por sua rica história e cultura."
-    },
-    {
-        "id": 6,
-        "assunto": "Biologia",
-        "categoria": "Ecologia",
-        "dificuldade": "Difícil",
-        "tipo": "Verdadeiro ou falso",
-        "enunciado": "As plantas realizam a fotossíntese para obter energia.",
-        "resposta_correta": "Verdadeiro",
-        "explicacao": "A fotossíntese é o processo pelo qual as plantas convertem luz solar em energia."
-    }
-]
-=======
+  {
+    "id": 1,
+    "assunto": "Matemática",
+    "categoria": "Aritmética",
+    "dificuldade": "Fácil",
+    "tipo": "Múltipla escolha",
+    "enunciado": "Qual é a soma de 2 + 2?",
+    "opcoes": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "resposta_correta": "4",
+    "explicacao": "A soma de 2 e 2 é igual a 4."
+  },
+  {
+    "id": 2,
+    "assunto": "História",
+    "categoria": "Revoluções",
+    "dificuldade": "Média",
+    "tipo": "Dissertativa",
+    "enunciado": "Explique a importância da Revolução Francesa.",
+    "resposta_correta": "A Revolução Francesa foi um marco na luta por direitos civis e igualdade.",
+    "explicacao": "Ela inspirou movimentos democráticos ao redor do mundo e trouxe conceitos de liberdade e igualdade."
+  },
+  {
+    "id": 3,
+    "assunto": "Ciências",
+    "categoria": "Química",
+    "dificuldade": "Difícil",
+    "tipo": "Verdadeiro ou falso",
+    "enunciado": "A água é composta por dois átomos de hidrogênio e um de oxigênio.",
+    "resposta_correta": "Verdadeiro",
+    "explicacao": "A fórmula química da água é H₂O, que confirma a composição de dois átomos de hidrogênio e um de oxigênio."
+  },
+  {
+    "id": 4,
+    "assunto": "Literatura",
+    "categoria": "Romance Brasileiro",
+    "dificuldade": "Fácil",
+    "tipo": "Múltipla escolha",
+    "enunciado": "Quem escreveu 'Dom Casmurro'?",
+    "opcoes": [
+      "Machado de Assis",
+      "Jorge Amado",
+      "Clarice Lispector",
+      "Graciliano Ramos"
+    ],
+    "resposta_correta": "Machado de Assis",
+    "explicacao": "Dom Casmurro é um dos romances mais famosos de Machado de Assis, publicado em 1899."
+  },
+  {
+    "id": 5,
+    "assunto": "Geografia",
+    "categoria": "Capitais",
+    "dificuldade": "Média",
+    "tipo": "Múltipla escolha",
+    "enunciado": "Qual é a capital da França?",
+    "opcoes": [
+      "Berlim",
+      "Madrid",
+      "Paris",
+      "Lisboa"
+    ],
+    "resposta_correta": "Paris",
+    "explicacao": "Paris é a capital da França e é conhecida por sua rica história e cultura."
+  },
+  {
+    "id": 6,
+    "assunto": "Biologia",
+    "categoria": "Ecologia",
+    "dificuldade": "Difícil",
+    "tipo": "Verdadeiro ou falso",
+    "enunciado": "As plantas realizam a fotossíntese para obter energia.",
+    "resposta_correta": "Verdadeiro",
+    "explicacao": "A fotossíntese é o processo pelo qual as plantas convertem luz solar em energia."
+  },
   {
     "id": 1,
     "assunto": "Matemática",
@@ -201,22 +198,6 @@
     "explicacao": "A área do triângulo é dada pela fórmula A = (base * altura) / 2 = (10 * 5) / 2 = 25."
   },
   {
-    "id": 10,
-    "assunto": "Química",
-    "categoria": "Elementos",
-    "dificuldade": "Média",
-    "tipo": "Múltipla escolha",
-    "enunciado": "Qual é o elemento químico com o símbolo 'O'?",
-    "opcoes": [
-      "Ouro",
-      "Oxigênio",
-      "Osmônio",
-      "Ótio"
-    ],
-    "resposta_correta": "Oxigênio",
-    "explicacao": "O símbolo 'O' representa o elemento químico oxigênio."
-  },
-  {
     "assunto": "Matemática",
     "dificuldade": "Fácil",
     "tipo": "Múltipla Escolha",
@@ -233,19 +214,6 @@
     "assunto": "Matemática",
     "dificuldade": "Fácil",
     "tipo": "Múltipla Escolha",
-    "enunciado": "Qual é o produto de 3 x 5?",
-    "opcoes": [
-      "15",
-      "10",
-      "8",
-      "20"
-    ],
-    "resposta_correta": "15"
-  },
-  {
-    "assunto": "Matemática",
-    "dificuldade": "Fácil",
-    "tipo": "Múltipla Escolha",
     "enunciado": "Qual número é par?",
     "opcoes": [
       "3",
@@ -254,19 +222,6 @@
       "9"
     ],
     "resposta_correta": "8"
-  },
-  {
-    "assunto": "Matemática",
-    "dificuldade": "Fácil",
-    "tipo": "Múltipla Escolha",
-    "enunciado": "Qual é a raiz quadrada de 16?",
-    "opcoes": [
-      "2",
-      "3",
-      "4",
-      "5"
-    ],
-    "resposta_correta": "4"
   },
   {
     "assunto": "Matemática",
@@ -358,123 +313,6 @@
       "y = 4x - 5"
     ],
     "resposta_correta": "y = 2x - 1"
-  },
-  {
-    "assunto": "Matemática",
-    "dificuldade": "Médio",
-    "tipo": "Múltipla Escolha",
-    "enunciado": "Qual é a fórmula do teorema de Pitágoras?",
-    "opcoes": [
-      "a² + b² = c",
-      "a² + b² = c²",
-      "c² = a + b",
-      "c = a + b"
-    ],
-    "resposta_correta": "a² + b² = c²"
-  },
-  {
-    "assunto": "Matemática",
-    "dificuldade": "Médio",
-    "tipo": "Múltipla Escolha",
-    "enunciado": "Qual é a derivada de x²?",
-    "opcoes": [
-      "2x",
-      "x",
-      "x²",
-      "2"
-    ],
-    "resposta_correta": "2x"
-  },
-  {
-    "assunto": "Matemática",
-    "dificuldade": "Médio",
-    "tipo": "Múltipla Escolha",
-    "enunciado": "Qual é o valor de x na equação 3x + 4 = 10?",
-    "opcoes": [
-      "1",
-      "2",
-      "3",
-      "4"
-    ],
-    "resposta_correta": "2"
-  },
-  {
-    "assunto": "Matemática",
-    "dificuldade": "Médio",
-    "tipo": "Múltipla Escolha",
-    "enunciado": "Qual é a área de um círculo de raio 3?",
-    "opcoes": [
-      "9π",
-      "6π",
-      "3π",
-      "12π"
-    ],
-    "resposta_correta": "9π"
-  },
-  {
-    "assunto": "Matemática",
-    "dificuldade": "Médio",
-    "tipo": "Múltipla Escolha",
-    "enunciado": "Qual é a solução da equação quadrática x² - 5x + 6 = 0?",
-    "opcoes": [
-      "x = 2 ou x = 3",
-      "x = 1 ou x = 6",
-      "x = 3 ou x = 4",
-      "x = 2 ou x = 4"
-    ],
-    "resposta_correta": "x = 2 ou x = 3"
-  },
-  {
-    "assunto": "Matemática",
-    "dificuldade": "Médio",
-    "tipo": "Múltipla Escolha",
-    "enunciado": "Qual é a soma dos números ímpares de 1 a 9?",
-    "opcoes": [
-      "25",
-      "20",
-      "30",
-      "35"
-    ],
-    "resposta_correta": "25"
-  },
-  {
-    "assunto": "Matemática",
-    "dificuldade": "Médio",
-    "tipo": "Múltipla Escolha",
-    "enunciado": "Qual é o próximo termo na sequência: 2, 4, 8, 16, ...?",
-    "opcoes": [
-      "24",
-      "32",
-      "64",
-      "48"
-    ],
-    "resposta_correta": "32"
-  },
-  {
-    "assunto": "Matemática",
-    "dificuldade": "Médio",
-    "tipo": "Múltipla Escolha",
-    "enunciado": "Qual é o logaritmo de 100 na base 10?",
-    "opcoes": [
-      "1",
-      "2",
-      "10",
-      "100"
-    ],
-    "resposta_correta": "2"
-  },
-  {
-    "assunto": "Matemática",
-    "dificuldade": "Médio",
-    "tipo": "Múltipla Escolha",
-    "enunciado": "Qual é a média aritmética de 4, 8 e 12?",
-    "opcoes": [
-      "8",
-      "10",
-      "12",
-      "14"
-    ],
-    "resposta_correta": "8"
   },
   {
     "assunto": "Matemática",
@@ -1411,4 +1249,3 @@
     "enunciado": "aecdfVA\\ZCXFR"
   }
 ]
->>>>>>> 25fd8a4 (Salvando alterações em questoes.json)
