@@ -24,8 +24,20 @@
         .form-label {
             font-weight: bold;
         }
+<<<<<<< HEAD
         .spinner-border {
             display: none;
+=======
+        .questao-selecionada {
+            background-color: #e9ecef;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 10px;
+        }
+        .questao-selecionada strong {
+            color: #495057;
+>>>>>>> c1a3c052b30cf6e7b0a6ae45add3269e7f5b94d5
         }
     </style>
 </head>
@@ -59,24 +71,42 @@
         <button type="button" id="gerar-pdf" class="btn btn-primary">Gerar Prova</button>
     </form>
 
+<<<<<<< HEAD
     <!-- Botão para visualizar questões selecionadas -->
     <div id="questoes-selecionadas" class="mb-4"></div>
+=======
+    <!-- Questões Selecionadas -->
+    <h3 class="text-center mb-4">Questões Selecionadas</h3>
+    <div id="questoes-selecionadas"></div>
+>>>>>>> c1a3c052b30cf6e7b0a6ae45add3269e7f5b94d5
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.13/jspdf.plugin.autotable.min.js"></script>
 <script>
+<<<<<<< HEAD
+=======
+    
+>>>>>>> c1a3c052b30cf6e7b0a6ae45add3269e7f5b94d5
     document.addEventListener('DOMContentLoaded', function() {
         // Recupera as questões selecionadas do localStorage
         const questoesSelecionadas = JSON.parse(localStorage.getItem('questoesSelecionadas')) || [];
 
+<<<<<<< HEAD
         // Exibe as questões selecionadas na página
+=======
+        // Exibe as questões selecionadas na página com o estilo correto
+>>>>>>> c1a3c052b30cf6e7b0a6ae45add3269e7f5b94d5
         const questoesContainer = document.getElementById('questoes-selecionadas');
         if (questoesSelecionadas.length > 0) {
             questoesSelecionadas.forEach((questao, index) => {
                 const div = document.createElement('div');
+<<<<<<< HEAD
                 div.classList.add('alert', 'alert-info');
+=======
+                div.classList.add('questao-selecionada');
+>>>>>>> c1a3c052b30cf6e7b0a6ae45add3269e7f5b94d5
                 div.innerHTML = `<strong>Assunto:</strong> ${questao.assunto}<br>
                                  <strong>Dificuldade:</strong> ${questao.dificuldade}<br>
                                  <strong>Enunciado:</strong> ${questao.enunciado}`;
@@ -86,6 +116,22 @@
             questoesContainer.textContent = 'Nenhuma questão selecionada.';
         }
 
+<<<<<<< HEAD
+=======
+        // Função para adicionar o cabeçalho "PROVA" centralizado
+        function adicionarCabecalho(doc) {
+            const larguraPagina = doc.internal.pageSize.width;
+            const texto = 'PROVA';
+            const larguraTexto = doc.getTextWidth(texto);
+            const posX = (larguraPagina - larguraTexto) / 2;
+
+            doc.setFontSize(18);
+            doc.text(texto, posX, 10);
+            doc.setFontSize(12);
+        }
+        
+
+>>>>>>> c1a3c052b30cf6e7b0a6ae45add3269e7f5b94d5
         // Geração do PDF
         document.getElementById('gerar-pdf').addEventListener('click', function() {
             const { jsPDF } = window.jspdf;
@@ -96,6 +142,7 @@
             const nomeEstudante = document.getElementById('nomeEstudante').value;
             const dataProva = document.getElementById('dataProva').value;
 
+<<<<<<< HEAD
            // Função para adicionar o cabeçalho "PROVA" centralizado
 function adicionarCabecalho(doc) {
     const larguraPagina = doc.internal.pageSize.width;
@@ -143,20 +190,29 @@ function adicionarCabecalho(doc) {
 
 
             // Adiciona o cabeçalho da prova
+=======
+>>>>>>> c1a3c052b30cf6e7b0a6ae45add3269e7f5b94d5
             adicionarCabecalho(doc);
             doc.autoTable({
                 head: [['Título da Prova', 'Instruções da Prova', 'Nome do Estudante', 'Data']],
                 body: [
                     [titulo, instrucoes, nomeEstudante, dataProva.split('-').reverse().join('/')]
                 ],
+<<<<<<< HEAD
                 startY: 20, // Ajusta a posição para não sobrepor o cabeçalho
+=======
+                startY: 20,
+>>>>>>> c1a3c052b30cf6e7b0a6ae45add3269e7f5b94d5
                 theme: 'grid'
             });
 
             doc.setFontSize(14);
             doc.text('Questões:', 10, doc.autoTable.previous.finalY + 10);
 
+<<<<<<< HEAD
             // Se houver questões selecionadas, adiciona elas ao PDF
+=======
+>>>>>>> c1a3c052b30cf6e7b0a6ae45add3269e7f5b94d5
             if (questoesSelecionadas.length > 0) {
                 let yPosition = doc.autoTable.previous.finalY + 20;
                 questoesSelecionadas.forEach((questao, index) => {
@@ -166,7 +222,10 @@ function adicionarCabecalho(doc) {
                     if (yPosition > 280) {
                         doc.addPage();
                         yPosition = 10;
+<<<<<<< HEAD
                         // Adiciona novamente o cabeçalho "PROVA" na nova página
+=======
+>>>>>>> c1a3c052b30cf6e7b0a6ae45add3269e7f5b94d5
                         adicionarCabecalho(doc);
                     }
                 });
@@ -175,7 +234,10 @@ function adicionarCabecalho(doc) {
                 doc.text('Nenhuma questão selecionada para gerar a prova.', 10, doc.autoTable.previous.finalY + 20);
             }
 
+<<<<<<< HEAD
             // Salva o PDF
+=======
+>>>>>>> c1a3c052b30cf6e7b0a6ae45add3269e7f5b94d5
             doc.save('prova.pdf');
         });
     });
