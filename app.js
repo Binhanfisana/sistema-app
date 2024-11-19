@@ -2,11 +2,12 @@ const express = require('express');
 const fs = require('fs');
 const path = require('path');
 const cors = require('cors');
-const { v4: uuidv4 } = require('uuid'); // Biblioteca para gerar IDs únicos
+const { v4: uuidv4 } = require('uuid');
 const app = express();
 const PORT = 3000;
 
-// Caminho para o arquivo de questões
+// Caminho para a página de login e de outras páginas
+const loginPagePath = path.join(__dirname, 'pages', 'Login1.html');
 const questoesPath = path.join(__dirname, 'data', 'questoes.json');
 
 // Middleware para servir arquivos estáticos e habilitar CORS
@@ -15,9 +16,14 @@ app.use(express.static(path.join(__dirname, 'pages')));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Rota para a página inicial (index.html)
+// Rota para redirecionar para a página de login
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'pages', 'index.html'));
+    res.redirect('/Login1.html');  // Redireciona diretamente para a página de login
+});
+
+// Rota para a página de login
+app.get('/Login1', (req, res) => {
+    res.sendFile(loginPagePath); // Serve a página de login
 });
 
 // Rota para a página de busca de questões
@@ -35,6 +41,16 @@ app.get('/visualizar-questoes', (req, res) => {
     res.sendFile(path.join(__dirname, 'pages', 'visualizar-questoes.html'));
 });
 
+// Middleware de verificação de autenticação (exemplo com sessões)
+// Aqui você pode colocar a lógica de autenticação já integrada
+app.use((req, res, next) => {
+    // Caso queira manter a autenticação, você pode integrar aqui
+    // if (!req.session || !req.session.user) {
+    //     return res.status(401).json({ message: 'Não autorizado' });
+    // }
+    next(); // Continuar se o usuário estiver autenticado
+});
+
 // Rota para cadastrar uma nova questão
 app.post('/api/cadastrar-questao', (req, res) => {
     const { assunto, dificuldade, tipo, enunciado } = req.body;
@@ -44,7 +60,7 @@ app.post('/api/cadastrar-questao', (req, res) => {
     }
 
     const novaQuestao = { 
-        id: uuidv4(), // Gerando um ID único
+        id: uuidv4(), 
         assunto, 
         dificuldade, 
         tipo, 

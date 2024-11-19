@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geração de Provas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #7397bb;
+        }
+        .container {
+            max-width: 800px;
+            margin-top: 50px;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #58595a;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+        .form-label {
+            font-weight: bold;
+        }
+        .spinner-border {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1 class="text-center mb-5">Geração de Provas</h1>
+
+    <!-- Formulário de Geração de Provas -->
+    <form id="form-prova" class="mb-4">
+        <div class="mb-3">
+            <label for="tituloProva" class="form-label">Título da Prova</label>
+            <input type="text" class="form-control" id="tituloProva" placeholder="Ex: Prova de Matemática" required>
+        </div>
+        
+        <div class="mb-3">
+            <label for="instrucoesProva" class="form-label">Instruções da Prova</label>
+            <textarea class="form-control" id="instrucoesProva" rows="3" placeholder="Ex: Leia atentamente as questões e responda." required></textarea>
+        </div>
+        
+        <div class="mb-3">
+            <label for="nomeEstudante" class="form-label">Nome do Estudante</label>
+            <input type="text" class="form-control" id="nomeEstudante" placeholder="Digite o nome do estudante" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="dataProva" class="form-label">Data</label>
+            <input type="date" class="form-control" id="dataProva" required>
+        </div>
+
+        <button type="button" id="gerar-pdf" class="btn btn-primary">Gerar Prova</button>
+    </form>
+
+    <!-- Botão para visualizar questões selecionadas -->
+    <div id="questoes-selecionadas" class="mb-4"></div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.13/jspdf.plugin.autotable.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Recupera as questões selecionadas do localStorage
+        const questoesSelecionadas = JSON.parse(localStorage.getItem('questoesSelecionadas')) || [];
+
+        // Exibe as questões selecionadas na página
+        const questoesContainer = document.getElementById('questoes-selecionadas');
+        if (questoesSelecionadas.length > 0) {
+            questoesSelecionadas.forEach((questao, index) => {
+                const div = document.createElement('div');
+                div.classList.add('alert', 'alert-info');
+                div.innerHTML = `<strong>Assunto:</strong> ${questao.assunto}<br>
+                                 <strong>Dificuldade:</strong> ${questao.dificuldade}<br>
+                                 <strong>Enunciado:</strong> ${questao.enunciado}`;
+                questoesContainer.appendChild(div);
+            });
+        } else {
+            questoesContainer.textContent = 'Nenhuma questão selecionada.';
+        }
+
+        // Geração do PDF
+        document.getElementById('gerar-pdf').addEventListener('click', function() {
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+
+            const titulo = document.getElementById('tituloProva').value;
+            const instrucoes = document.getElementById('instrucoesProva').value;
+            const nomeEstudante = document.getElementById('nomeEstudante').value;
+            const dataProva = document.getElementById('dataProva').value;
+
+           // Função para adicionar o cabeçalho "PROVA" centralizado
+function adicionarCabecalho(doc) {
+    const larguraPagina = doc.internal.pageSize.width;
+    const texto = 'PROVA';
+    const larguraTexto = doc.getTextWidth(texto);
+    const posX = (larguraPagina - larguraTexto) / 2; // Calcula a posição X para centralizar
+
+    doc.setFontSize(18);
+    doc.text(texto, posX, 10); // Adiciona o texto centralizado
+    doc.setFontSize(12);
+}
+// Função para adicionar o cabeçalho "PROVA" centralizado
+function adicionarCabecalho(doc) {
+    const larguraPagina = doc.internal.pageSize.width;
+    const texto = 'PROVA';
+    const larguraTexto = doc.getTextWidth(texto);
+    const posX = (larguraPagina - larguraTexto) / 2; // Calcula a posição X para centralizar
+
+    doc.setFontSize(18);
+    doc.text(texto, posX, 10); // Adiciona o texto centralizado
+    doc.setFontSize(12);
+}
+// Função para adicionar o cabeçalho "PROVA" centralizado
+function adicionarCabecalho(doc) {
+    const larguraPagina = doc.internal.pageSize.width;
+    const texto = 'PROVA';
+    const larguraTexto = doc.getTextWidth(texto);
+    const posX = (larguraPagina - larguraTexto) / 2; // Calcula a posição X para centralizar
+
+    doc.setFontSize(18);
+    doc.text(texto, posX, 10); // Adiciona o texto centralizado
+    doc.setFontSize(12);
+}
+     // Função para adicionar o cabeçalho "PROVA" centralizado
+function adicionarCabecalho(doc) {
+    const larguraPagina = doc.internal.pageSize.width;
+    const texto = 'PROVA';
+    const larguraTexto = doc.getTextWidth(texto);
+    const posX = (larguraPagina - larguraTexto) / 2; // Calcula a posição X para centralizar
+
+    doc.setFontSize(18);
+    doc.text(texto, posX, 10); // Adiciona o texto centralizado
+    doc.setFontSize(12);
+}
+
+
+            // Adiciona o cabeçalho da prova
+            adicionarCabecalho(doc);
+            doc.autoTable({
+                head: [['Título da Prova', 'Instruções da Prova', 'Nome do Estudante', 'Data']],
+                body: [
+                    [titulo, instrucoes, nomeEstudante, dataProva.split('-').reverse().join('/')]
+                ],
+                startY: 20, // Ajusta a posição para não sobrepor o cabeçalho
+                theme: 'grid'
+            });
+
+            doc.setFontSize(14);
+            doc.text('Questões:', 10, doc.autoTable.previous.finalY + 10);
+
+            // Se houver questões selecionadas, adiciona elas ao PDF
+            if (questoesSelecionadas.length > 0) {
+                let yPosition = doc.autoTable.previous.finalY + 20;
+                questoesSelecionadas.forEach((questao, index) => {
+                    doc.setFontSize(12);
+                    doc.text(`${index + 1}. ${questao.enunciado}`, 10, yPosition);
+                    yPosition += 10;
+                    if (yPosition > 280) {
+                        doc.addPage();
+                        yPosition = 10;
+                        // Adiciona novamente o cabeçalho "PROVA" na nova página
+                        adicionarCabecalho(doc);
+                    }
+                });
+            } else {
+                doc.setFontSize(12);
+                doc.text('Nenhuma questão selecionada para gerar a prova.', 10, doc.autoTable.previous.finalY + 20);
+            }
+
+            // Salva o PDF
+            doc.save('prova.pdf');
+        });
+    });
+</script>
+
+</body>
+</html>

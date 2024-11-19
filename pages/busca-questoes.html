@@ -5,9 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Busca de Questões - Interface Profissional</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <a href="index.html" class="btn">Voltar à Página Inicial</a>
-
- <style>
+    <style>
         /* Estilos customizados */
         body {
             background-color: #f0f2f5;
@@ -151,7 +149,7 @@
                         resultadoDiv.innerHTML += `
                             <div class="card">
                                 <div class="card-header">
-                                    <input type="checkbox" class="selecionar-questao form-check-input" data-index="${index}">
+                                    <input type="checkbox" class="selecionar-questao form-check-input" data-id="${questao.id}">
                                     ${questao.assunto}
                                 </div>
                                 <div class="card-body">
@@ -165,11 +163,11 @@
                     // Atualiza seleção de questões
                     document.querySelectorAll('.selecionar-questao').forEach(checkbox => {
                         checkbox.addEventListener('change', function() {
-                            const index = parseInt(this.getAttribute('data-index'));
+                            const questaoId = this.getAttribute('data-id');
                             if (this.checked) {
-                                questoesSelecionadas.push(data[index]);
+                                questoesSelecionadas.push(questaoId);
                             } else {
-                                questoesSelecionadas = questoesSelecionadas.filter(q => q !== data[index]);
+                                questoesSelecionadas = questoesSelecionadas.filter(id => id !== questaoId);
                             }
                         });
                     });
@@ -184,12 +182,12 @@
 
     document.getElementById('confirmar-selecao').addEventListener('click', function() {
         if (questoesSelecionadas.length > 0) {
-            alert('Você selecionou ' + questoesSelecionadas.length + ' questão(ões).');
-            console.log('Questões selecionadas:', questoesSelecionadas);
+            // Redireciona para a página de geração de prova com as IDs das questões selecionadas
+            const queryParams = questoesSelecionadas.join(',');
+            window.location.href = `gerar-prova.html?ids=${queryParams}`;
         } else {
             alert('Nenhuma questão selecionada.');
         }
-        
     });
 </script>
 
